@@ -3,18 +3,21 @@
 describe('Directive: fastMap', function () {
 
   // load the directive's module
-  beforeEach(module('yotestApp'));
+  beforeEach(module('googleFastMap'));
 
-  var element,
-    scope;
+  var element, $element, scope;
 
   beforeEach(inject(function ($rootScope) {
     scope = $rootScope.$new();
   }));
 
-  it('should make hidden element visible', inject(function ($compile) {
+  it('should append elements to directi', inject(function ($compile) {
     element = angular.element('<fast-map></fast-map>');
     element = $compile(element)(scope);
-    expect(element.text()).toBe('this is the fastMap directive');
+
+    $element = $(element);
+    
+    expect($element.find('div.angular-google-map-container div[ng-transclude][style="display:none;"]').length).toBe(1);
+
   }));
 });

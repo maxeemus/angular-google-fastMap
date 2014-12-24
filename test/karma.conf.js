@@ -23,6 +23,10 @@ module.exports = function(config) {
       'bower_components/angular-cookies/angular-cookies.js',
       'bower_components/angular-resource/angular-resource.js',
       'bower_components/angular-route/angular-route.js',
+      'bower_components/jquery/dist/jquery.js',
+      'bower_components/lodash/dist/lodash.compat.js',
+      'bower_components/angular-google-maps/dist/angular-google-maps.js',
+      'bower_components/gmaps-markerclusterer-plus/src/markerclusterer.js',
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
       'test/spec/**/*.js'
